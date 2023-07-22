@@ -2,5 +2,8 @@ import express, { Request, Response, NextFunction } from "express";
 import { router } from "./routes";
 
 const app = express();
+app.use(express.json());
 
-app.listen(333, () => console.log('Servidor On'))
+app.use(router);
+
+app.listen(3333, () => console.log("Servidor On"));
