@@ -1,10 +1,10 @@
-import { Router, Request, Response } from "express";
+import { Router } from "express";
 
-const router = Router(); 
+import { CreateUserController } from "./controllers/user/CreateUserController";
 
-router.get('/teste', (req: Request, res: Response) => {
-    return res.json({name: 'Henrique'})
-    // throw new Error('Erro ao fazer essa requisiçao')
-})
+const router = Router();
+
+//-- Rotas User --
+router.post("/users", new CreateUserController().handle);
 
 export { router };
