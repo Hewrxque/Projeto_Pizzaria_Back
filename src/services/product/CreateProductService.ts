@@ -20,7 +20,7 @@ class CreateProductService{
                 category_id: category_id
             }
         })
-        return product
+        return product;
     }
 }
 
