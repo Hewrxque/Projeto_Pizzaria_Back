@@ -11,11 +11,14 @@ class DetailOrderService{
             where:{
                 order_id: order_id
             },
-
+            include:{
+                product: true,
+                order: true
+            }
         })
 
         return orders;
-        
+
     }   
 }
 
